@@ -36,11 +36,6 @@
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
                 <category android:name="android.intent.category.LAUNCHER"/>
-            </intent-filter>
-        </activity>
-        <activity android:name="com.example.action_process_text.ActionProcessTextPlugin"
-            android:label="Action_Text" android:theme="@style/LaunchTheme">
-            <intent-filter>
                 <action android:name="android.intent.action.PROCESS_TEXT" />
                 <data android:mimeType="text/plain"/>
                 <category android:name="android.intent.category.DEFAULT" />

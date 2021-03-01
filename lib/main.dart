@@ -1,9 +1,9 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:platform_info/platform_info.dart';
-import 'package:action_process_text/action_process_text.dart';
 
 void main() {
   runApp(MyApp());
@@ -57,6 +57,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   int _counter = 0;
   var inputText;
+  static const platform = const MethodChannel('samples.flutter.dev/battery');
 
   void _incrementCounter() {
     setState(() {
@@ -70,9 +71,10 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   Future<void> initActionProcessText() async {
-    inputText = await ActionProcessText.getInputText;
+    inputText = await platform.invokeMethod('getBatteryLevel');
     print('MYLOG: INPUT TEXT');
-    print(inputText);
+    setState(() {});
+    print(inputText.toString());
   }
 
   printVersion() async {
