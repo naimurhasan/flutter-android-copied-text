@@ -2,6 +2,8 @@
 
 A new Flutter application.
 
+<img src="https://github.com/naimurhasan/flutter-android-copied-text/blob/main/flutter_copy_text.png?raw=true" height="500">
+
 ## Getting Started
 
 This project is a starting point for a Flutter application.
